@@ -1,0 +1,99 @@
+///elapsed time
+/*double prevTime = glfwGetTime();
+update();
+double currentTime = glfwGetTime();
+std::cout << "elapsed time : " << currentTime - prevTime << std::endl;*/
+
+
+//glfwInit();
+
+//bool gameRunning = true;
+//bool timeRunning = true;
+
+/////elapsed time
+///*double prevTime = glfwGetTime();
+//update();
+//double currentTime = glfwGetTime();
+//std::cout << "elapsed time : " << currentTime - prevTime << std::endl;*/
+
+//double oldTime = glfwGetTime();
+//double currentTime = 0;
+//double deltaTime = 0;
+
+//int frameCount = 0;
+
+//while (gameRunning)
+//{
+//	currentTime = glfwGetTime();
+//	frameCount++;
+
+//	while (timeRunning)
+//	{
+//		oldTime = currentTime;
+//		currentTime = glfwGetTime();
+//		deltaTime = currentTime - oldTime;
+//		std::cout << "Delta Time : " << deltaTime << std::endl;
+//		//system("cls");
+//	}
+
+//	if (currentTime - oldTime >= 1.0f)
+//	{
+//		std::cout << "FPS : " << frameCount << std::endl;
+
+//		frameCount = 0;
+//		oldTime = currentTime;
+//	}
+
+//	//update();
+//}
+
+if (totalTime >= 1.0f)
+{
+	//std::cout << "FPS : " << frameCount << std::endl;
+	printf("%.2f FPS\n", float(fps));
+	printf("%f Delta Time\n", float(deltaTime));
+	totalTime = 0.0f;
+	frameCount = 0;
+}
+
+totalTime += deltaTime;
+frameCount++;
+
+
+///
+
+const float fpsLimit = 1.0f;
+const float targetDeltaTime = 1.0f / fpsLimit;
+
+float deltaTime = 0.0f;
+float prevTime = glfwGetTime();
+
+/*float startTime = 0.0f;
+float oldTime = glfwGetTime();
+float currentFrameTime = glfwGetTime() - startTime;
+float duration = 1000.0f * (targetDeltaTime) + 0.5f;
+
+if ((int)duration > 0)
+{
+	Sleep((DWORD)(int)duration);
+}
+startTime = oldTime;
+
+float currentTime = glfwGetTime();
+float deltaTime = currentTime - oldTime;
+float fps = 1.0f / deltaTime;
+
+std::cout << "FPS : " << fps << " || Delta Time : " << deltaTime << std::endl;
+oldTime = currentTime;*/
+
+///
+
+
+Application
+- Start
+- Update
+- Draw
+
+C# (java....) // different from C++
+Reference type variable - Class
+Value type variable - struct, float, int, double, etc.
